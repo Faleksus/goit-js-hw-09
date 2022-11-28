@@ -29,6 +29,5 @@
     "posthtml-include": "^1.7.4",
     "sass": "^1.56.1"
   },
-  "browserslist": "> 0.5%, last 2 versions, not dead",
-  "main": "index.js"
+  "browserslist": "> 0.5%, last 2 versions, not dead"
 }
