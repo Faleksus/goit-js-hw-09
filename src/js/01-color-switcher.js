@@ -6,6 +6,8 @@ const refs = {
     body: document.querySelector('body'),
 };
 
+refs.stopBtn.setAttribute('disabled', true);
+
 function getRandomHexColor() {
     return `#${Math.floor(Math.random() * 16777215).toString(16)}`;
   }
@@ -16,7 +18,6 @@ const changeColor = {
 
     start() {
         if (this.isActive) {
-
             return;
         }
         this.isActive = true;
