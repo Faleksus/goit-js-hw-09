@@ -1,4 +1,4 @@
-import '../css/common.css'
+import '../css/common.css';
 
 const refs = {
     startBtn: document.querySelector('button[data-start]'),
@@ -23,13 +23,16 @@ const changeColor = {
         this.intervalId = setInterval(() => {
             const colorNameEl = getRandomHexColor();
             refs.body.style.background = colorNameEl;
-            
+            refs.startBtn.setAttribute('disabled', true);
+            refs.stopBtn.removeAttribute('disabled');
         }, 1000);
     },
 
     stop() {
         clearInterval(this.intervalId);
         this.isActive = false;
+        refs.startBtn.removeAttribute('disabled');
+        refs.stopBtn.setAttribute('disabled', true);
     },
 };
 

@@ -142,7 +142,7 @@
       this[globalName] = mainExports;
     }
   }
-})({"gzrwE":[function(require,module,exports) {
+})({"bnTUh":[function(require,module,exports) {
 "use strict";
 var global = arguments[3];
 var HMR_HOST = null;
@@ -521,11 +521,15 @@ const changeColor = {
         this.intervalId = setInterval(()=>{
             const colorNameEl = getRandomHexColor();
             refs.body.style.background = colorNameEl;
+            refs.startBtn.setAttribute("disabled", true);
+            refs.stopBtn.removeAttribute("disabled");
         }, 1000);
     },
     stop () {
         clearInterval(this.intervalId);
         this.isActive = false;
+        refs.startBtn.removeAttribute("disabled");
+        refs.stopBtn.setAttribute("disabled", true);
     }
 };
 refs.startBtn.addEventListener("click", ()=>{
@@ -535,6 +539,6 @@ refs.stopBtn.addEventListener("click", ()=>{
     changeColor.stop();
 });
 
-},{"../css/common.css":"97fCK"}],"97fCK":[function() {},{}]},["gzrwE","cYUEh"], "cYUEh", "parcelRequire7bc7")
+},{"../css/common.css":"97fCK"}],"97fCK":[function() {},{}]},["bnTUh","cYUEh"], "cYUEh", "parcelRequire7bc7")
 
 //# sourceMappingURL=01-color-switcher.52e3b619.js.map
