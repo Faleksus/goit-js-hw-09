@@ -19,7 +19,7 @@ startBtn.disabled = true;
 
 const options = {
   enableTime: true,
-  time_24hr: true,
+  time24hr: true,
   defaultDate: new Date(),
   minuteIncrement: 1,
 
