@@ -16,9 +16,9 @@ function onFormSubmit(event) {
   let currentDelay = firstDelay;
   for (let i = 0; i < promiseCount; i++ ) {
     if (currentDelay !== 0) {
+      createPromise(i + 1, currentDelay);
       currentDelay += stepDelay;
     }
-    createPromise(i + 1, currentDelay);
   }
 }
 
